@@ -1,4 +1,4 @@
-import { Packer } from 'roadroller';
+// import { Packer } from 'roadroller';
 import htmlMinifier from 'html-minifier';
 import JSZip from 'jszip';
 import fs from 'fs';
@@ -30,7 +30,7 @@ async function zip(content) {
 
 export async function replaceScript(html, scriptFilename, scriptCode) {
   const reScript = new RegExp(`<script([^>]*?) src="[./]*${scriptFilename}"([^>]*)></script>`);
-
+  const { Packer } = await import('roadroller');
   // First we have to move the script to the end of the body, because vite is
   // opinionated and otherwise just hoists it into <head>:
   // https://github.com/vitejs/vite/issues/7838
