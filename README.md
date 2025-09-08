@@ -1,6 +1,6 @@
 # Tiny Yurts
 
-<img src="https://github.com/burntcustard/tiny-yurts/blob/main/screenshot-bigx2.png?raw=true" width="400" height="250" alt="Screenshot of the game, showing a green background, with small dots and other simple shapes representing paths, animals, trees, and a pond."/>
+<img src="https://github.com/burntcustard/tiny-yurts/blob/main/screenshot-bigx2.png?raw=true" width="400" alt="Screenshot of the game, showing a green background, with small dots and other simple shapes representing paths, animals, trees, and a pond."/>
 
 ### [Play online](https://burnt.io/tiny-yurts/)
 
@@ -17,9 +17,9 @@
 - All the graphics are SVG-based, with CSS transitions and transforms. There is no canvas, and there are no asset files. It's HTML-CSS-SVG-in-JS all the way down.
 - JavaScript packer [Roadroller](https://lifthrasiir.github.io/roadroller/) by [Kang Seonghoon](https://mearie.org/).
 - [Kontra.js](https://straker.github.io/kontra/) game engine by [Steven Lambert](https://stevenklambert.com/).
-- [Karplus-Strong](https://en.wikipedia.org/wiki/Karplus%E2%80%93Strong_string_synthesis) [Web Audio API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API) implementation, from [xem's](https://xem.github.io/) [MiniSynth](https://github.com/xem/js1k19/blob/gh-pages/miniSynth/index.html), based on [Keith Horwood's](https://keithwhor.com/) [audiosynth](https://github.com/keithwhor/audiosynth).
+- [Karplus-Strong](https://en.wikipedia.org/wiki/Karplus%E2%80%93Strong_string_synthesis) via the [Web Audio API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API), from [xem's](https://xem.github.io/) [MiniSynth](https://github.com/xem/js1k19/blob/gh-pages/miniSynth/index.html), based on [Keith Horwood's](https://keithwhor.com/) [audiosynth](https://github.com/keithwhor/audiosynth).
 - [JSZip](https://stuk.github.io/jszip/) _and_ [advzip-bin](https://github.com/elliot-nelson/advzip-bin) for zip compression.
-- [Vite](https://vitejs.dev/) and [Terser](https://terser.org/) with a messy, unstable, project-specific ([custom plugin](plugins/vite-js13k.js)) for maximum minification.
+- [Vite](https://vitejs.dev/) and [Terser](https://terser.org/) with a messy, unstable, project-specific [custom plugin](plugins/vite-js13k.js) for maximum minification.
 
 ### Tips & Tricks
 <details>
@@ -55,9 +55,3 @@
    `npm run build`
 
 5. See [package.json](package.json) for other scripts
-
-### Known issues
-
-- There is a weird flashing that can happen during the gameover transition on Chrome on Android.
-- There's occasionally a case of disappearing paths on iOS if the game is navigated away from.
-- On small screens, drawing paths is a little fiddly!
